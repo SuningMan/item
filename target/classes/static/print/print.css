@@ -1,0 +1,11 @@
+	fieldset{
+	    border: 1px solid #ddd;
+	}
+	
+	.my-table {
+	    border: 1px solid #ccc;
+	    border-collapse: collapse;
+	}
+	.my-table td {
+	    border: 1px solid #000;
+	}

@@ -1,0 +1,574 @@
+.banner {
+	POSITION: relative;
+	HEIGHT: 394px;
+	CLEAR: both;
+	OVERFLOW: hidden
+}
+
+#banner .f_img {
+	FILTER: progid:DXImageTransform.Microsoft.Fade( duration=0.5, overlap=1.0);
+	WIDTH: 960px;
+	FONT-FAMILY: Arial;
+	OVERFLOW: hidden
+}
+
+#banner .f_img #banner_1 {
+	BACKGROUND-IMAGE: url("banner.jpg")
+		/*tpa=http://www.yunhsn.com/img/banner.jpg*/;
+	PADDING-BOTTOM: 0px;
+	PADDING-LEFT: 595px;
+	PADDING-RIGHT: 0px;
+	BACKGROUND-REPEAT: no-repeat;
+	HEIGHT: 104px;
+	OVERFLOW: hidden;
+	PADDING-TOP: 180px
+}
+
+#banner .f_img #banner_1 #banner_2 {
+	BACKGROUND-IMAGE: url("banner.jpg")
+		/*tpa=http://www.yunhsn.com/img/banner.jpg*/;
+	PADDING-BOTTOM: 0px;
+	PADDING-LEFT: 595px;
+	PADDING-RIGHT: 0px;
+	BACKGROUND-REPEAT: no-repeat;
+	HEIGHT: 104px;
+	OVERFLOW: hidden;
+	PADDING-TOP: 180px
+}
+
+#banner .f_img #banner_2 {
+	PADDING-BOTTOM: 0px;
+	PADDING-LEFT: 480px;
+	PADDING-RIGHT: 0px;
+	BACKGROUND: url("banner2.jpg")
+		/*tpa=http://www.yunhsn.com/img/banner2.jpg*/ no-repeat;
+	HEIGHT: 82px;
+	PADDING-TOP: 202px
+}
+
+#banner .f_img #banner_2 .d {
+	POSITION: relative;
+	LINE-HEIGHT: 999px;
+	DISPLAY: inline-block;
+	OVERFLOW: hidden
+}
+
+#banner .f_img #banner_1 .b {
+	POSITION: relative;
+	LINE-HEIGHT: 999px;
+	DISPLAY: inline-block;
+	OVERFLOW: hidden
+}
+
+#banner .f_img #banner_1 .b {
+	WIDTH: 173px;
+	HEIGHT: 52px
+}
+
+#banner .f_img #banner_2 .d {
+	WIDTH: 173px;
+	HEIGHT: 52px;
+	MARGIN-RIGHT: 15px
+}
+
+#banner #f_bn {
+	POSITION: absolute;
+	TEXT-ALIGN: right;
+	LINE-HEIGHT: 22px;
+	WIDTH: 60px;
+	BOTTOM: 15px;
+	HEIGHT: 22px;
+	OVERFLOW: hidden;
+	RIGHT: 30px
+}
+
+* HTML #banner #f_bn {
+	POSITION: fixed;
+	MARGIN-TOP: -37px;
+	WIDTH: 60px;
+	PADDING-RIGHT: 30px;
+	FLOAT: right;
+	HEIGHT: 22px;
+	OVERFLOW: hidden
+}
+
+#banner #f_bn .f_bn_box {
+	WIDTH: 60px;
+	OVERFLOW: hidden
+}
+
+#banner #f_bn A {
+	POSITION: relative;
+	TEXT-ALIGN: center;
+	WIDTH: 22px;
+	DISPLAY: block;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FLOAT: left;
+	FONT-SIZE: 12px;
+	CURSOR: pointer;
+	FONT-WEIGHT: bold;
+	MARGIN-RIGHT: 8px;
+	TEXT-DECORATION: none
+}
+
+#banner #f_bn A.f1 {
+	BACKGROUND: url("focus_bn2.png")
+		/*tpa=http://www.yunhsn.com/img/focus_bn2.png*/ no-repeat;
+	COLOR: #ffffff
+}
+
+#banner #f_bn A.f2 {
+	BACKGROUND: url("focus_bn1.png")
+		/*tpa=http://www.yunhsn.com/img/focus_bn1.png*/ no-repeat;
+	COLOR: #7b91b6
+}
+
+.intro H1 {
+	FILTER: progid:DXImageTransform.Microsoft.Fade( duration=0.5, overlap=1.0);
+	BACKGROUND: url("banner2.jpg")
+		/*tpa=http://www.yunhsn.com/img/banner2.jpg*/ no-repeat 50% bottom;
+	HEIGHT: 50px;
+	COLOR: #ffffff;
+	FONT-SIZE: 16px
+}
+
+.intro H1.s1 {
+	BACKGROUND: url("banner.jpg")
+		/*tpa=http://www.yunhsn.com/img/banner.jpg*/ no-repeat 50% bottom
+}
+
+.intro H1.s2 {
+	BACKGROUND: url("banner2.jpg")
+		/*tpa=http://www.yunhsn.com/img/banner2.jpg*/ no-repeat 50% bottom
+}
+
+.intro H1 SPAN {
+	POSITION: absolute;
+	PADDING-BOTTOM: 0px;
+	LINE-HEIGHT: 42px;
+	MARGIN: 0px 0px 0px -11px;
+	PADDING-LEFT: 18px;
+	WIDTH: 315px;
+	PADDING-RIGHT: 0px;
+	DISPLAY: block;
+	BACKGROUND: url("why_t.png") /*tpa=http://www.yunhsn.com/img/why_t.png*/
+		 no-repeat 0px 0px;
+	HEIGHT: 44px;
+	PADDING-TOP: 6px;
+	_line-height: 44px;
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true,
+		sizingMethod=scale, src="why_t.png")
+}
+
+.intro .c {
+	BACKGROUND: url("why_c.png") /*tpa=http://www.yunhsn.com/img/why_c.png*/
+		 repeat-x;
+	HEIGHT: 231px;
+	COLOR: #262626
+}
+
+.intro .intro_ol {
+	FLOAT: left
+}
+
+.intro H3 {
+	MARGIN-BOTTOM: 6px;
+	FONT-SIZE: 14px
+}
+
+.intro .why {
+	MARGIN-BOTTOM: 6px;
+	FONT-SIZE: 14px;
+	FONT-WEIGHT: bold
+}
+
+.intro .intro_ol LI {
+	LINE-HEIGHT: 22px;
+	MARGIN: 22px 0px 0px 12px;
+	PADDING-LEFT: 60px;
+	WIDTH: 237px;
+	DISPLAY: inline;
+	BACKGROUND: url("why_list.gif")
+		/*tpa=http://www.yunhsn.com/img/why_list.gif*/ no-repeat;
+	FLOAT: left;
+	HEIGHT: 80px;
+	FONT-SIZE: 12px;
+	OVERFLOW: hidden;
+	_padding-top: 1px;
+	_height: 79px
+}
+
+.intro .intro_ol LI.s1 {
+	BACKGROUND-POSITION: 0px 4px
+}
+
+.intro .intro_ol LI.s2 {
+	BACKGROUND-POSITION: 0px -91px
+}
+
+.intro .intro_ol LI.s3 {
+	BACKGROUND-POSITION: 0px -186px
+}
+
+.intro .intro_ol LI.s4 {
+	BACKGROUND-POSITION: 0px -281px
+}
+
+.intro .intro_ol LI.s5 {
+	BACKGROUND-POSITION: 0px -376px
+}
+
+.intro .intro_ol LI.s6 {
+	BACKGROUND-POSITION: 0px -471px
+}
+
+.intro .video {
+	WIDTH: 245px;
+	FLOAT: left;
+	PADDING-TOP: 24px
+}
+
+.box {
+	PADDING-BOTTOM: 20px;
+	PADDING-LEFT: 1px;
+	WIDTH: 958px;
+	PADDING-RIGHT: 1px;
+	BACKGROUND: #ffffff;
+	OVERFLOW: hidden;
+	PADDING-TOP: 1px
+}
+
+.col1 {
+	WIDTH: 709px;
+	FLOAT: left
+}
+
+.col2 {
+	WIDTH: 249px;
+	BACKGROUND: url("mt.png") /*tpa=http://www.yunhsn.com/img/mt.png*/ 
+		#f7fafd no-repeat right bottom;
+	FLOAT: left;
+}
+
+.gn {
+	BACKGROUND: #ffffff;
+	HEIGHT: 260px
+}
+
+.gn H2 {
+	PADDING-BOTTOM: 0px;
+	LINE-HEIGHT: 20px;
+	PADDING-LEFT: 21px;
+	PADDING-RIGHT: 0px;
+	BACKGROUND: #ffffff;
+	HEIGHT: 20px;
+	FONT-SIZE: 16px;
+	PADDING-TOP: 18px
+}
+
+.gn H3 {
+	MARGIN-BOTTOM: 6px;
+	FONT-SIZE: 14px
+}
+
+.gn .why {
+	MARGIN-BOTTOM: 6px;
+	FONT-SIZE: 14px;
+	FONT-WEIGHT: bold
+}
+
+.gn .gn_ul {
+	BACKGROUND: #ffffff;
+	CLEAR: both;
+	OVERFLOW: hidden
+}
+
+.gn .gn_ul LI {
+	LINE-HEIGHT: 22px;
+	MARGIN: 22px 3px 0px 16px;
+	PADDING-LEFT: 70px;
+	WIDTH: 262px;
+	DISPLAY: inline;
+	BACKGROUND: url("gn.png") /*tpa=http://www.yunhsn.com/img/gn.png*/ 
+		no-repeat;
+	FLOAT: left;
+	HEIGHT: 80px;
+	FONT-SIZE: 12px
+}
+
+.gn .gn_ul LI.s1 {
+	WIDTH: 252px;
+	BACKGROUND-POSITION: 0px -30px
+}
+
+.gn .gn_ul LI.s2 {
+	BACKGROUND-POSITION: 0px -141px
+}
+
+.gn .gn_ul LI.s3 {
+	WIDTH: 252px;
+	BACKGROUND-POSITION: 0px -247px
+}
+
+.gn .gn_ul LI.s4 {
+	BACKGROUND-POSITION: 0px -357px
+}
+
+.case {
+	BACKGROUND: #ffffff;
+	HEIGHT: 500px;
+	OVERFLOW: hidden
+}
+
+.case H2 {
+	POSITION: relative;
+	PADDING-BOTTOM: 0px;
+	LINE-HEIGHT: 20px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	BACKGROUND: url("case_t.png")
+		/*tpa=http://www.yunhsn.com/img/case_t.png*/ #ffffff no-repeat 0px
+		26px;
+	HEIGHT: 20px;
+	MARGIN-LEFT: 21px;
+	FONT-SIZE: 16px;
+	PADDING-TOP: 16px
+}
+
+.case H2 .t {
+	PADDING-RIGHT: 6px;
+	BACKGROUND: #ffffff
+}
+
+.case .aljs {
+	TEXT-ALIGN: center;
+	MARGIN-BOTTOM: 6px;
+	COLOR: #1a5d96;
+	FONT-SIZE: 14px;
+	FONT-WEIGHT: bold
+}
+
+.case .case_ul {
+	MARGIN-TOP: 15px;
+	PADDING-LEFT: 10px
+}
+
+.case .case_ul LI {
+	LINE-HEIGHT: 32px;
+	MARGIN: 0px 12px;
+	WIDTH: 200px;
+	DISPLAY: inline;
+	FLOAT: left;
+	FONT-SIZE: 12px
+}
+
+.case .case_ul LI IMG {
+	DISPLAY: block;
+	MARGIN-BOTTOM: 5px
+}
+
+.case .case_ul LI.s1 {
+	WIDTH: 297px
+}
+
+.case .case_ul LI.s2 {
+	WIDTH: 300px
+}
+
+.case .case_ul LI.s3 {
+	WIDTH: 201px
+}
+
+.more {
+	POSITION: absolute;
+	PADDING-LEFT: 6px;
+	DISPLAY: inline-block;
+	BACKGROUND: url("more.png") /*tpa=http://www.yunhsn.com/img/more.png*/ 
+		no-repeat 0px 9px;
+	FONT-SIZE: 12px;
+	TOP: 16px;
+	RIGHT: 24px;
+	FONT-WEIGHT: normal
+}
+
+.user {
+	MARGIN-TOP: 10px
+}
+
+.user H2 {
+	POSITION: relative;
+	PADDING-BOTTOM: 0px;
+	LINE-HEIGHT: 20px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	BACKGROUND: url("case_t.png")
+		/*tpa=http://www.yunhsn.com/img/case_t.png*/ #ffffff no-repeat 33px
+		26px;
+	HEIGHT: 20px;
+	MARGIN-LEFT: 21px;
+	FONT-SIZE: 16px;
+	PADDING-TOP: 16px
+}
+
+.user H2 .t {
+	PADDING-RIGHT: 6px;
+	BACKGROUND: #ffffff
+}
+
+.user H3 {
+	MARGIN-BOTTOM: 6px;
+	COLOR: #1a5d96;
+	FONT-SIZE: 14px
+}
+
+.user .case_ul {
+	MARGIN-TOP: 20px;
+	PADDING-LEFT: 20px
+}
+
+.user .case_ul LI {
+	MARGIN: 4px;
+	WIDTH: 158px;
+	DISPLAY: inline;
+	FLOAT: left;
+	HEIGHT: 52px;
+	OVERFLOW: hidden
+}
+
+.wp {
+	TEXT-ALIGN: center;
+	MARGIN: 9px 8px 0px 10px;
+	BACKGROUND: url("wp.jpg") /*tpa=http://www.yunhsn.com/img/wp.jpg*/ 
+		no-repeat;
+	HEIGHT: 86px
+}
+
+.wp .wp_b {
+	PADDING-BOTTOM: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	DISPLAY: block;
+	HEIGHT: 31px;
+	COLOR: #466189;
+	FONT-SIZE: 14px;
+	PADDING-TOP: 55px
+}
+
+.notes {
+	PADDING-BOTTOM: 20px
+}
+
+.help {
+	PADDING-BOTTOM: 20px
+}
+
+.mt {
+	PADDING-BOTTOM: 20px
+}
+
+.notes {
+	BACKGROUND: url("col2_line.png")
+		/*tpa=http://www.yunhsn.com/img/col2_line.png*/ no-repeat center
+		bottom
+}
+
+.help {
+	BACKGROUND: url("col2_line.png")
+		/*tpa=http://www.yunhsn.com/img/col2_line.png*/ no-repeat center
+		bottom
+}
+
+.col2 H2 {
+	POSITION: relative;
+	PADDING-BOTTOM: 0px;
+	LINE-HEIGHT: 20px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	MARGIN-BOTTOM: 18px;
+	BACKGROUND: #f7fafd;
+	HEIGHT: 20px;
+	MARGIN-LEFT: 2px;
+	FONT-SIZE: 16px;
+	PADDING-TOP: 20px
+}
+
+.col2 H3 {
+	POSITION: relative;
+	PADDING-BOTTOM: 0px;
+	LINE-HEIGHT: 20px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	MARGIN-BOTTOM: 18px;
+	BACKGROUND: #f7fafd;
+	HEIGHT: 20px;
+	MARGIN-LEFT: 22px;
+	FONT-SIZE: 16px;
+	PADDING-TOP: 20px
+}
+
+.col2 UL {
+	PADDING-BOTTOM: 0px;
+	PADDING-LEFT: 22px;
+	PADDING-RIGHT: 0px;
+	PADDING-TOP: 0px
+}
+
+.col2 UL LI {
+	LINE-HEIGHT: 26px
+}
+
+.help UL {
+	BACKGROUND: url("qa.png") /*tpa=http://www.yunhsn.com/img/qa.png*/ 
+		no-repeat 105px bottom;
+	HEIGHT: 148px
+}
+
+.help .more {
+	TOP: 20px
+}
+
+.flink {
+	height: 17px;
+	BORDER-BOTTOM: #cccccc 1px solid;
+	BORDER-LEFT: #cccccc 1px solid;
+	PADDING-BOTTOM: 10px;
+	MARGIN: 0px auto;
+	PADDING-LEFT: 10px;
+	WIDTH: 878px;
+	PADDING-RIGHT: 10px;
+	BORDER-TOP: #cccccc 1px solid;
+	BORDER-RIGHT: #cccccc 1px solid;
+	PADDING-TOP: 10px
+}
+
+.yqlj {
+	PADDING-BOTTOM: 10px;
+	BACKGROUND-COLOR: #ffffff;
+	PADDING-LEFT: 20px;
+	WIDTH: 940px;
+	MARGIN-LEFT: auto;
+	FONT-SIZE: 16px;
+	FONT-WEIGHT: bold;
+	MARGIN-RIGHT: auto;
+	PADDING-TOP: 10px
+}
+
+.linka {
+	PADDING-BOTTOM: 0px;
+	BACKGROUND-COLOR: #ffffff;
+	MARGIN: 0px auto;
+	PADDING-LEFT: 0px;
+	WIDTH: 960px;
+	PADDING-RIGHT: 0px;
+	PADDING-TOP: 0px
+}
+
+.yq ul {
+	list-style: none;
+}
+
+.yq ul li {
+	float: left;
+	padding-left: 50px;
+}
