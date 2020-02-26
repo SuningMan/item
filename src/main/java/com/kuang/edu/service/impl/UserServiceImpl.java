@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -23,7 +24,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     UserMapper userMapper;
 
     @Override
+    public User findUserIsExist(Map<String, Object> map) {
+        return userMapper.findUserIsExist(map);
+    }
+
+    @Override
     public List<User> findAll() {
-        return userMapper.selectList(null);
+        return userMapper.findAll();
     }
 }

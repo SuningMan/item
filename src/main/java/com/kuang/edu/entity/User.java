@@ -46,11 +46,9 @@ public class User implements Serializable {
     private String lastOrg;
 
     @ApiModelProperty(value = "是否管理员（1.是 0.否）")
-    @TableField("isManager")
     private String isManager;
 
     @ApiModelProperty(value = "是否注册（1.是 0.否）")
-    @TableField("isRegister")
     private String isRegister;
 
     @ApiModelProperty(value = "注册码序列号")

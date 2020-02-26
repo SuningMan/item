@@ -30,7 +30,7 @@ public class UserController {
      */
     @GetMapping
     public List<User> list(){
-       List<User> userList = userService.findAll();
+       List<User> userList = userService.list(null);
        userList.forEach(System.out::println);
         return userList;
     }

@@ -4,6 +4,7 @@ import com.kuang.edu.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -15,5 +16,12 @@ import java.util.List;
  */
 public interface UserService extends IService<User> {
 
-    public List<User> findAll();
+    /**
+     * 查询是否有此用户
+     * @param map
+     * @return
+     */
+    User findUserIsExist(Map<String, Object> map);
+
+    List<User> findAll();
 }
