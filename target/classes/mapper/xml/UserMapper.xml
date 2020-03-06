@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuang.edu.mapper.UserMapper">
+    <resultMap id="BaseResultMap" type="com.kuang.edu.entity.User">
+        <id column="user_id" jdbcType="VARCHAR" property="userId" />
+        <result column="user_name" jdbcType="VARCHAR" property="userName" />
+        <result column="user_paw" jdbcType="VARCHAR" property="userPaw" />
+        <result column="unionid" jdbcType="VARCHAR" property="unionid" />
+        <result column="org" jdbcType="VARCHAR" property="org" />
+        <result column="last_org" jdbcType="VARCHAR" property="lastOrg" />
+        <result column="isManager" jdbcType="VARCHAR" property="isManager" />
+        <result column="isRegister" jdbcType="VARCHAR" property="isRegister" />
+        <result column="register_number" jdbcType="VARCHAR" property="registerNumber" />
+        <result column="register_time" jdbcType="VARCHAR" property="registerTime" />
+        <result column="create_time" jdbcType="VARCHAR" property="createTime" />
+        <result column="update_time" jdbcType="VARCHAR" property="updateTime" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        user_id, user_name, user_paw, unionid, org, last_org, isManager, isRegister, register_number,
+        register_time, create_time, update_time
+    </sql>
+    <select id="findUserIsExist" parameterType="java.util.Map" resultMap="BaseResultMap" >
+        select
+        <include refid="Base_Column_List" />
+        from user
+        where user_name = #{userName,jdbcType=VARCHAR} and user_paw = #{userPaw,jdbcType=VARCHAR}  and last_org="管理员"
+    </select>
+
+    <select id="findAll" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from user
+        where 1=1
+    </select>
+</mapper>
