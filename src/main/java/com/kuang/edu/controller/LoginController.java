@@ -49,6 +49,52 @@ public class LoginController {
     }
 
     /**
+     * 跳转到菜单页
+     * @return
+     */
+    @RequestMapping("/nav")
+    public String toNav() {
+        return "nav";
+    }
+
+
+    /**
+     * 产品详情页
+     * @return
+     */
+    @RequestMapping("/productInfo")
+    public String toProductInfo() {
+        return "productInfo";
+    }
+
+    /**
+     * 用户详情页
+     * @return
+     */
+    @RequestMapping("/userInfo")
+    public String toUserInfo() {
+        return "userInfo";
+    }
+
+    /**
+     * 供应商详情页
+     * @return
+     */
+    @RequestMapping("/supplierInfo")
+    public String toSupplierInfo() {
+        return "supplierInfo";
+    }
+
+    /**
+     * 供注册码详情页
+     * @return
+     */
+    @RequestMapping("/registerCodeInfo")
+    public String toRegisterCodeInfo() {
+        return "registerCodeInfo";
+    }
+
+    /**
      * 电脑端登陆
      Title: loginByPc
      *@author QiuSheng Lv
