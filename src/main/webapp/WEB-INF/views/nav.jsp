@@ -27,20 +27,20 @@
                 <li class="nav-li">
                 	<a href="javascript:;" class="ue-clear"><i class="nav-ivon"></i><span class="nav-text">产品信息</span></a>
                     <ul class="subnav">
-                    	<li class="subnav-li " href="productInfo.jsp" data-id="1"><a href="javascript:;" class="ue-clear"><i class="subnav-icon"></i><span class="subnav-text">产品详情</span></a></li>
+                    	<li class="subnav-li " href="productInfo" data-id="1"><a href="javascript:;" class="ue-clear"><i class="subnav-icon"></i><span class="subnav-text">产品详情</span></a></li>
                     </ul>
                 </li>
                 <li class="nav-li current">
                 	<a href="javascript:;" class="ue-clear"><i class="nav-ivon"></i><span class="nav-text">用户信息</span></a>
                 	<ul class="subnav">
-                        <li class="subnav-li" href="userInfo.jsp" data-id="2"><a href="javascript:;" class="ue-clear"><i class="subnav-icon"></i><span class="subnav-text">用户详情</span></a></li>
+                        <li class="subnav-li" href="userInfo" data-id="2"><a href="javascript:;" class="ue-clear"><i class="subnav-icon"></i><span class="subnav-text">用户详情</span></a></li>
                     </ul>
                 </li>
                 <li class="nav-li current" id="supplier">
                 	<a href="javascript:;" class="ue-clear"><i class="nav-ivon"></i><span class="nav-text">厂商信息</span></a>
                 	<ul class="subnav">
-                        <li class="subnav-li" href="supplierInfo.jsp" data-id="3"><a href="javascript:;" class="ue-clear"><i class="subnav-icon"></i><span class="subnav-text">厂商详情</span></a></li>
-                    	<li class="subnav-li" href="registerCodeInfo.jsp" data-id="4"><a href="javascript:;" class="ue-clear"><i class="subnav-icon"></i><span class="subnav-text">注册码详情</span></a></li>
+                        <li class="subnav-li" href="supplierInfo" data-id="3"><a href="javascript:;" class="ue-clear"><i class="subnav-icon"></i><span class="subnav-text">厂商详情</span></a></li>
+                    	<li class="subnav-li" href="registerCodeInfo" data-id="4"><a href="javascript:;" class="ue-clear"><i class="subnav-icon"></i><span class="subnav-text">注册码详情</span></a></li>
                     </ul>
                        
                 </li>

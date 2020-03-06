@@ -37,7 +37,7 @@
         </div>
     </div>
     <div id="bd">
-        <iframe width="100%" height="100%" id="mainIframe" src="nav.jsp" frameborder="0"></iframe>
+        <iframe width="100%" height="100%" id="mainIframe" src="nav" frameborder="0"></iframe>
     </div>
     <div id="ft" class="ue-clear">
     	<div class="ft1 ue-clear">
