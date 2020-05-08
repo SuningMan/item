@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuang.edu.dao.SupplierDao">
+
+    <resultMap type="com.kuang.edu.entity.Supplier" id="SupplierMap">
+        <result property="id" column="id" jdbcType="VARCHAR"/>
+        <result property="suppliername" column="supplierName" jdbcType="VARCHAR"/>
+        <result property="contact" column="contact" jdbcType="VARCHAR"/>
+        <result property="phonenumber" column="phoneNumber" jdbcType="VARCHAR"/>
+        <result property="address" column="address" jdbcType="VARCHAR"/>
+        <result property="createtime" column="createTime" jdbcType="VARCHAR"/>
+        <result property="updatetime" column="updateTime" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="SupplierMap">
+        select
+          id, supplierName, contact, phoneNumber, address, createTime, updateTime
+        from wistron.supplier
+        where id = #{id}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="SupplierMap">
+        select
+          id, supplierName, contact, phoneNumber, address, createTime, updateTime
+        from wistron.supplier
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="SupplierMap">
+        select
+          id, supplierName, contact, phoneNumber, address, createTime, updateTime
+        from wistron.supplier
+        <where>
+            <if test="id != null and id != ''">
+                and id = #{id}
+            </if>
+            <if test="suppliername != null and suppliername != ''">
+                and supplierName = #{suppliername}
+            </if>
+            <if test="contact != null and contact != ''">
+                and contact = #{contact}
+            </if>
+            <if test="phonenumber != null and phonenumber != ''">
+                and phoneNumber = #{phonenumber}
+            </if>
+            <if test="address != null and address != ''">
+                and address = #{address}
+            </if>
+            <if test="createtime != null and createtime != ''">
+                and createTime = #{createtime}
+            </if>
+            <if test="updatetime != null and updatetime != ''">
+                and updateTime = #{updatetime}
+            </if>
+        </where>
+    </select>
+
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into wistron.supplier(supplierName, contact, phoneNumber, address, createTime, updateTime)
+        values (#{suppliername}, #{contact}, #{phonenumber}, #{address}, #{createtime}, #{updatetime})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update wistron.supplier
+        <set>
+            <if test="suppliername != null and suppliername != ''">
+                supplierName = #{suppliername},
+            </if>
+            <if test="contact != null and contact != ''">
+                contact = #{contact},
+            </if>
+            <if test="phonenumber != null and phonenumber != ''">
+                phoneNumber = #{phonenumber},
+            </if>
+            <if test="address != null and address != ''">
+                address = #{address},
+            </if>
+            <if test="createtime != null and createtime != ''">
+                createTime = #{createtime},
+            </if>
+            <if test="updatetime != null and updatetime != ''">
+                updateTime = #{updatetime},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from wistron.supplier where id = #{id}
+    </delete>
+
+</mapper>
