@@ -1,5 +1,6 @@
 package com.kuang.edu.service.impl;
 
+import com.kuang.edu.dao.UserDao;
 import com.kuang.edu.entity.User;
 import com.kuang.edu.mapper.UserMapper;
 import com.kuang.edu.service.UserService;
@@ -19,17 +20,17 @@ import java.util.Map;
  * @since 2020-02-25
  */
 @Service
-public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements UserService {
+public class UserServiceImpl implements UserService {
     @Autowired
-    UserMapper userMapper;
+    UserDao userDao;
 
     @Override
     public User findUserIsExist(Map<String, Object> map) {
-        return userMapper.findUserIsExist(map);
+        return userDao.findUserIsExist(map);
     }
 
     @Override
     public List<User> findAll() {
-        return userMapper.findAll();
+        return userDao.findAll();
     }
 }

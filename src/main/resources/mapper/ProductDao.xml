@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kuang.edu.dao.ProductDao">
+
+    <resultMap type="com.kuang.edu.entity.Product" id="ProductMap">
+        <result property="productId" column="product_id" jdbcType="VARCHAR"/>
+        <result property="orgId" column="org_id" jdbcType="VARCHAR"/>
+        <result property="enterTime" column="enter_time" jdbcType="VARCHAR"/>
+        <result property="qrcodeUrl" column="QRcode_url" jdbcType="VARCHAR"/>
+        <result property="openId" column="openId" jdbcType="VARCHAR"/>
+        <result property="monthNum" column="monthNum" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" jdbcType="VARCHAR"/>
+        <result property="printStatus" column="printStatus" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="ProductMap">
+        select
+          product_id, org_id, enter_time, QRcode_url, openId, monthNum, description, create_time, update_time, printStatus
+        from wistron.product
+        where product_id = #{productId}
+    </select>
+
+    <!--查询指定行数据-->
+    <select id="queryAllByLimit" resultMap="ProductMap">
+        select
+          product_id, org_id, enter_time, QRcode_url, openId, monthNum, description, create_time, update_time, printStatus
+        from wistron.product
+        limit #{offset}, #{limit}
+    </select>
+
+    <!--通过实体作为筛选条件查询-->
+    <select id="queryAll" resultMap="ProductMap">
+        select
+          product_id, org_id, enter_time, QRcode_url, openId, monthNum, description, create_time, update_time, printStatus
+        from wistron.product
+        <where>
+            <if test="productId != null and productId != ''">
+                and product_id = #{productId}
+            </if>
+            <if test="orgId != null and orgId != ''">
+                and org_id = #{orgId}
+            </if>
+            <if test="enterTime != null and enterTime != ''">
+                and enter_time = #{enterTime}
+            </if>
+            <if test="qrcodeUrl != null and qrcodeUrl != ''">
+                and QRcode_url = #{qrcodeUrl}
+            </if>
+            <if test="openid != null and openid != ''">
+                and openId = #{openid}
+            </if>
+            <if test="monthnum != null and monthnum != ''">
+                and monthNum = #{monthnum}
+            </if>
+            <if test="description != null and description != ''">
+                and description = #{description}
+            </if>
+            <if test="createTime != null and createTime != ''">
+                and create_time = #{createTime}
+            </if>
+            <if test="updateTime != null and updateTime != ''">
+                and update_time = #{updateTime}
+            </if>
+            <if test="printstatus != null and printstatus != ''">
+                and printStatus = #{printstatus}
+            </if>
+        </where>
+    </select>
+    <select id="findAllProduct" parameterType="java.util.Map" resultMap="ProductMap">
+        select
+        pr.*,
+        pm.activate_time,
+        pm.activate_image_url,
+        pm.isover_time
+        from product pr
+        LEFT JOIN product_maintain pm on pm.product_id = pr.product_id
+        where  1=1
+        <if test="search != null and search !='' ">
+            and pr.product_id like CONCAT('%',#{search,jdbcType=VARCHAR},'%')
+        </if>
+
+        <if test="orgId != null and orgId !='' ">
+            and pr.org_Id = #{orgId,jdbcType=VARCHAR}
+        </if>
+        <if test="userId != null and userId !='' ">
+            and pm.user_id = #{userId,jdbcType=VARCHAR}
+        </if>
+    </select>
+    <!--新增所有列-->
+    <insert id="insert" keyProperty="productId" useGeneratedKeys="true">
+        insert into wistron.product(org_id, enter_time, QRcode_url, openId, monthNum, description, create_time, update_time, printStatus)
+        values (#{orgId}, #{enterTime}, #{qrcodeUrl}, #{openid}, #{monthnum}, #{description}, #{createTime}, #{updateTime}, #{printstatus})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update wistron.product
+        <set>
+            <if test="orgId != null and orgId != ''">
+                org_id = #{orgId},
+            </if>
+            <if test="enterTime != null and enterTime != ''">
+                enter_time = #{enterTime},
+            </if>
+            <if test="qrcodeUrl != null and qrcodeUrl != ''">
+                QRcode_url = #{qrcodeUrl},
+            </if>
+            <if test="openid != null and openid != ''">
+                openId = #{openid},
+            </if>
+            <if test="monthnum != null and monthnum != ''">
+                monthNum = #{monthnum},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="createTime != null and createTime != ''">
+                create_time = #{createTime},
+            </if>
+            <if test="updateTime != null and updateTime != ''">
+                update_time = #{updateTime},
+            </if>
+            <if test="printstatus != null and printstatus != ''">
+                printStatus = #{printstatus},
+            </if>
+        </set>
+        where product_id = #{productId}
+    </update>
+
+    <!--通过主键删除-->
+    <delete id="deleteById">
+        delete from wistron.product where product_id = #{productId}
+    </delete>
+
+</mapper>

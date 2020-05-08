@@ -28,11 +28,11 @@ public class UserController {
      * 查询所有用户
      * @return
      */
-    @GetMapping
+ /*   @GetMapping
     public List<User> list(){
        List<User> userList = userService.list(null);
        userList.forEach(System.out::println);
         return userList;
-    }
+    }*/
 }
 

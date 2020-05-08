@@ -1,8 +1,11 @@
 package com.kuang.edu.controller;
 
+import com.kuang.edu.annotation.Log;
 import com.kuang.edu.entity.User;
 import com.kuang.edu.service.UserService;
-import com.kuang.edu.util.StringUtil;
+import com.kuang.edu.util.StringUtils;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,7 +17,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -22,6 +24,7 @@ import java.util.Map;
  * @Date: 2020/2/25 15:17
  */
 @Controller
+@Api(tags = "用户登陆接口")
 public class LoginController {
     @Autowired
     private UserService userService;
@@ -95,11 +98,13 @@ public class LoginController {
     }
 
     /**
-     * 电脑端登陆
+     * 用户登陆
      Title: loginByPc
      *@author QiuSheng Lv
      *@date 2019年6月30日
      */
+    @Log("用户登陆")
+    @ApiOperation("用户登陆")
     @RequestMapping("/user/login")
     @ResponseBody
     public JSONObject loginByPc(HttpServletRequest request, HttpServletResponse response) {
@@ -109,18 +114,16 @@ public class LoginController {
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("userName", userName);
         map.put("userPaw", passWord);
-        User user=new User();
         try {
-            user = userService.findUserIsExist(map);
-            System.out.println("===="+user.toString());
-            if(StringUtil.notNullorEmpty(user)) {
-                request.getSession().setAttribute("user", user);//登录信息存入session
+           User user = userService.findUserIsExist(map);
+            if(StringUtils.isNotEmpty(user)) {
+                //登录信息存入session
+                request.getSession().setAttribute("user", user);
                 json.put("success", true);
             }else {
                 json.put("error", false);
             }
         } catch (Exception e) {
-            // TODO: handle exception
             json.put("error", false);
             System.out.println(e.toString());
         }

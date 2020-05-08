@@ -14,7 +14,7 @@ import java.util.Map;
  * @author lvqs
  * @since 2020-02-25
  */
-public interface UserService extends IService<User> {
+public interface UserService {
 
     /**
      * 查询是否有此用户
